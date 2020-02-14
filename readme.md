@@ -101,5 +101,8 @@ also creates a `copyup` command which is identical to `copyfiles` but `-up` defa
 var copyfiles = require('copyfiles');
 
 copyfiles([paths], opt, callback);
+
+// example usage
+copyfiles(['./srcPath','./destinationPath'], {flat: true, all: true }, () => console.log('files copied'));
 ```
 takes an array of paths, last one is the destination path, also takes an optional argument which the -u option if a number, otherwise if it's `true` it's the flat option or if it is an object it is a hash of the various options (the long version e.g. up, all, flat, exclude, error, verbose, follow, and soft)  
